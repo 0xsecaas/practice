@@ -16,7 +16,7 @@ This repository documents my learning journey in Smart Contract Security, starti
 | Re-entrancy      | [Report](./ethernaut/reentrancy/REPORT.MD) |
 | Elevator         | [Report](./ethernaut/elevator/REPORT.MD)   |
 | Privacy          | [Report](./ethernaut/privacy/REPORT.md)    |
-| Gatekeeper One   | ❌                                         |
+| Gatekeeper One   | [Report](./ethernaut/gatekeeper_1/REPORT.md)|
 | Gatekeeper Two   | ❌                                         |
 | Naught Coin      | ❌                                         |
 | Preservation     | ❌                                         |
