@@ -23,14 +23,14 @@ contract GKTest is Test {
         uint256 required_gas = 0;
         for (uint256 i = 20; i <= 81910; i++) {
             // Try different gas values, adjusted by i
-            try caller.hack(8191 * 2 + i, key) {
+            try caller.proxy(8191 * 2 + i, key) {
                 console.log("Gas required ->", i);
                 required_gas = 8191 * 2 + i;
                 return; // success
             } catch {}
         }
 
-        caller.hack(required_gas, key);
+        caller.proxy(required_gas, key);
         assert(gk.entrant() == msg.sender);
     }
 

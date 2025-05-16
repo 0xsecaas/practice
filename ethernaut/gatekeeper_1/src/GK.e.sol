@@ -12,20 +12,7 @@ contract GKCaller {
         target = GK(_target);
     }
 
-    function hack(uint256 gasToSend, bytes8 key) public {
-        require(
-            uint32(uint64(key)) == uint16(uint64(key)),
-            "GatekeeperOne: invalid gateThree part one"
-        );
-        require(
-            uint32(uint64(key)) != uint64(key),
-            "GatekeeperOne: invalid gateThree part two"
-        );
-        require(
-            uint32(uint64(key)) == uint16(uint160(tx.origin)),
-            "GatekeeperOne: invalid gateThree part three"
-        );
-
+    function proxy(uint256 gasToSend, bytes8 key) public {
         require(target.enter{gas: gasToSend}(key), "failed");
     }
 }
